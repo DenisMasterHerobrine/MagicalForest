@@ -18,3 +18,7 @@ Also this mod accepts IMCs and compatible with a bunch of mods.
 - Implement Silverblood Trees
 - Implement Silvyrhil tools set
 - Implement Silvyrhul spell system
+
+NOTE: 
+ - "master" branch is for 1.16.1 builds, currently have only biome, when 1.15.2 content will be finished - To-Do List features will be ported to 1.16.X.
+ - "1.15.2" branch is for 1.15.2 builds, currently WIP and have LTS support and needs a completed to-do list.
