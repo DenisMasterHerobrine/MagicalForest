@@ -13,4 +13,8 @@ Also this mod accepts IMCs and compatible with a bunch of mods.
 - Traverse
 
 # To-Do List
-- Currently nothing, feel free to suggest features for this mod to be implemented.
+- Implement Mana Pool system
+- Add guidebook
+- Implement Silverblood Trees
+- Implement Silvyrhil tools set
+- Implement Silvyrhul spell system
