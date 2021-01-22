@@ -1,4 +1,4 @@
-# Magical Forest
+# TC4: CE - Biomes - Magical Forest
 Magical Forest is a mod which brings a new biome into Minecraft 1.15.2+. Inspired by Thaumcraft 4.
 
 Magical Forest is a green biome with a lot of big mushrooms, a lot of caves with ores. You can find villages and other vanilla (and modded) structures if you like adventures.
@@ -13,12 +13,12 @@ Also this mod accepts IMCs and compatible with a bunch of mods.
 - Traverse
 
 # To-Do List
-- Implement Mana Pool system
-- Add guidebook
-- Implement Silverblood Trees
-- Implement Silvyrhil tools set
-- Implement Silvyrhul spell system
+- Implement Silverwood
+- Implement Greatwood
+- Implement config file to define biomes settings
+- Implement Tainted Biome
+- Begin work on Amber and Aspect Crystals
 
 NOTE: 
- - "master" branch is for 1.16.1 builds, currently have only biome, when 1.15.2 content will be finished - To-Do List features will be ported to 1.16.X.
- - "1.15.2" branch is for 1.15.2 builds, currently WIP and have LTS support and needs a completed to-do list.
+ - "master" branch is for 1.16.2+ builds, also called as TC4: CE. Magical Forest will be revived as another project in memory of Thaumcraft by Azanor. Everything will be written from scratch.
+ - "1.15.2" branch is for 1.15.2 builds, currently abandoned version of Magical Forest.
