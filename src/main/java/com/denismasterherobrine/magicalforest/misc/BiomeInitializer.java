@@ -17,6 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BiomeInitializer {
+
     public static final DeferredRegister<Biome> BIOMES = new DeferredRegister<>(ForgeRegistries.BIOMES,
             MagicalForest.MOD_ID);
 
@@ -33,7 +34,7 @@ public class BiomeInitializer {
                                                     new SurfaceBuilderConfig(Blocks.COARSE_DIRT.getDefaultState(),
                                                             Blocks.DIRT.getDefaultState(),
                                                             Blocks.DIRT.getDefaultState())))
-                                    .category(Biome.Category.PLAINS).downfall(0.5f).depth(0.12f).parent(null)));
+                                    .category(Biome.Category.FOREST).downfall(0.5f).depth(0.12f).parent(null)));
 
     public static void registerBiomes() {
         registerBiome(MAGICAL_FOREST.get(), BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.OVERWORLD);
@@ -41,7 +42,7 @@ public class BiomeInitializer {
 
     private static void registerBiome(Biome biome, BiomeDictionary.Type... types) {
         // the line below will make it spawn in the overworld
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, 100));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(biome, Config.biomeWeight.get()));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }

@@ -32,7 +32,7 @@ description='''
 This mod brings back awesome Magical Forest biome from Thaumcraft to 1.15.2+ versions of Minecraft!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.magicalforest]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -44,7 +44,7 @@ This mod brings back awesome Magical Forest biome from Thaumcraft to 1.15.2+ ver
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.magicalforest]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"
