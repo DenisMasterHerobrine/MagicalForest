@@ -1,6 +1,7 @@
 package com.denismasterherobrine.magicalforest.biome;
 
 import com.denismasterherobrine.magicalforest.misc.ColorConstants;
+import com.denismasterherobrine.magicalforest.misc.Config;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
@@ -75,11 +76,17 @@ public class MagicalForestBiome extends Biome {
 
     @Override
     public int getGrassColor(double posX, double posZ) {
-        return ColorConstants.MAGICAL_FOREST_GRASS_COLOR;
+        if (Config.blueForest.get()) {
+            return 0x426E85;
+        }
+        else return 0x22D469;
     }
 
     @Override
     public int getFoliageColor() {
-        return ColorConstants.MAGICAL_FOREST_FOLIAGE_COLOR;
+        if (Config.blueForest.get()) {
+            return 0x5B99B7;
+        }
+        else return 0x3AC280;
     }
 }

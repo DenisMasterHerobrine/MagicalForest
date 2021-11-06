@@ -6,8 +6,14 @@ public class ColorConstants {
 
     public static final int STANDARD_WATERFOG = 0x050533;
 
-    public static final int MAGICAL_FOREST_FOLIAGE_COLOR = 0x3AC280;
-    public static final int MAGICAL_FOREST_GRASS_COLOR = 0x22D469;
+    public static int MAGICAL_FOREST_FOLIAGE_COLOR = 0x3AC280;
 
-    private ColorConstants() {}
+    public static int MAGICAL_FOREST_GRASS_COLOR = 0x22D469;
+
+    private ColorConstants() {
+        if (Config.blueForest.get()){
+            MAGICAL_FOREST_FOLIAGE_COLOR = 0x27424E;
+            MAGICAL_FOREST_GRASS_COLOR = 0x426E85;
+        }
+    }
 }
