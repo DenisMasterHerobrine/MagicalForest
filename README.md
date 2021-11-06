@@ -12,17 +12,26 @@ Magical Forest is a green biome with a lot of big mushrooms, a lot of caves with
 This mod is very lightweight for any modpack. You can easily add/remove to your existing worlds without any danger since this mod use vanilla generator and will not corrupt your world.
 Also this mod accepts IMCs and compatible with a bunch of mods.
 
+# Ports?
+- Fabric: **Not planned**, but feel free to do it yourself if you want.
+- Forge:
+- - 1.17: Planned, but waiting on Abnormals Core to update, can be skipped if Abnormals Core will skip this major version.
+- - 1.16: Stable, will receive all content updates up to 1.18 update.
+- - 1.15: Stable, no support will be given since it's abandoned.
+
 **Compatible with:**
 - Biomes O' Plenty
 - Terraforged
 - Traverse
+- and probably more...
 
 # To-Do List
 - Implement Silverwood
 - Implement Greatwood
 - Implement Tainted Biome
-- Begin work on Amber and Aspect Crystals
+- Begin work on Amber blocks and lights and Aspect Crystals
 
 NOTE: 
- - "master" branch is for builds supporting latest or LTS version, also called as TC4: CE. Magical Forest will be revived as another project in memory of Thaumcraft by Azanor. Everything will be written from scratch.
- - "1.15.2" branch is for 1.15.2 builds, currently abandoned version of Magical Forest.
+ - "master" branch is for builds supporting latest or LTS version. Magical Forest will be revived as another project in memory of Thaumcraft by Azanor. Everything will be written from scratch.
+ - "1.15.2" branch is for 1.15.2 builds, currently abandoned version of Magical Forest. (1.0.x)
+
