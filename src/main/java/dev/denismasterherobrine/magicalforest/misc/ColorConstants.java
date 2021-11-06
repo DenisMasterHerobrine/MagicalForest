@@ -12,6 +12,8 @@ public class ColorConstants {
 
     public static int MAGICAL_FOREST_GRASS_COLOR = 0x22D469;
 
+    // Sadly, this feature will be removed as of cleaning up everything.
+    @Deprecated
     private ColorConstants() {
         if (Configuration.blueForest.get()){
             MAGICAL_FOREST_FOLIAGE_COLOR = 0x27424E;

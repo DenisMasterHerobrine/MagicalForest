@@ -20,9 +20,9 @@ public class Configuration {
 
     static {
         COMMON_BUILDER.comment("General Magical Forest Biome Configuration").push(CATEGORY_GENERAL);
-        biomeWeightForest = COMMON_BUILDER.comment("Magical Forest spawn weight in Overworld. The lower the number, the rarer is the biome!").defineInRange("biomeWeight", 20, 1,2147483647);
-        biomeWeightHills = COMMON_BUILDER.comment("Magical Forest Hills spawn weight in Overworld. The lower the number, the rarer is the biome!").defineInRange("biomeWeight", 12, 1,2147483647);
-        blueForest = COMMON_BUILDER.comment("This option brings back old Thaumcraft 2 blue-like Magical Forest look.").define("blueForest", false);
+        biomeWeightForest = COMMON_BUILDER.comment("[WIP, heavily untested] Magical Forest spawn weight in Overworld. The lower the number, the rarer is the biome!").defineInRange("biomeWeightForest", 20, 1,2147483647);
+        biomeWeightHills = COMMON_BUILDER.comment("[WIP, heavily untested] Magical Forest Hills spawn weight in Overworld. The lower the number, the rarer is the biome!").defineInRange("biomeWeightHills", 12, 1,2147483647);
+        // blueForest = COMMON_BUILDER.comment("This option brings back old Thaumcraft 2 blue-like Magical Forest look.").define("blueForest", false);
         COMMON_BUILDER.pop();
         COMMON_CONFIG = COMMON_BUILDER.build();
     }
