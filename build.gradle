@@ -47,7 +47,7 @@ minecraft {
             property 'mixin.env.disableRefMap', 'true'
 
             mods {
-                bayou_blues {
+                magicalforest {
                     source sourceSets.main
                 }
             }
@@ -61,7 +61,7 @@ minecraft {
             property 'mixin.env.disableRefMap', 'true'
 
             mods {
-                bayou_blues {
+                magicalforest {
                     source sourceSets.main
                 }
             }
@@ -76,7 +76,7 @@ minecraft {
             args '--mod', 'magicalforest', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                bayou_blues {
+                magicalforest {
                     source sourceSets.main
                 }
             }
