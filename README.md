@@ -15,8 +15,8 @@ Also this mod accepts IMCs and compatible with a bunch of mods.
 # Ports?
 - Fabric: **Not planned**, but feel free to do it yourself if you want.
 - Forge:
-- - 1.17: Planned, but waiting on Abnormals Core to update, can be skipped if Abnormals Core will skip this major version.
-- - 1.16: Stable, will receive all content updates up to 1.18 update.
+- - 1.18: Planned, but waiting on Blueprint to update.
+- - 1.16: Stable, will receive all content updates up to 1.18 update. (Seems like it will have some features backported from 1.18)
 - - 1.15: Stable, no support will be given since it's abandoned.
 
 **Compatible with:**
