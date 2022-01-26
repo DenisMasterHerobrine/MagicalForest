@@ -2,7 +2,7 @@
 ![](https://cf.way2muchnoise.eu/versions/magical-forest.svg)
 ![](https://img.shields.io/github/license/DenisMasterHerobrine/MagicalForest) 
 ![](https://img.shields.io/github/issues/denismasterherobrine/magicalforest)
-<div align="center"> <h1>  Magical Forest </h1> </div>
+<div align="center"> <h1>  Magical Forest (Fabric) </h1> </div>
 <div align="center"> Magical Forest is a mod which brings a new biome into Minecraft 1.15.2+. Inspired by Thaumcraft 4. </div>
 
 <div align="center"> <h1>  Information </h1> </div>
@@ -19,12 +19,12 @@ Also this mod accepts IMCs and compatible with a bunch of mods such as:
 
 <div align="center"> <h1>  Ports? </h1> </div>
 
-- Fabric: **Not planned**, but feel free to do it yourself if you want.
+- Fabric: 
+- - 1.18: Unstable, also requires a bit more stuff to be done such as trees and more config options.
 - Forge:
-- - 1.18: Unstable, currently WIP.
+- - 1.18: Stable, but requires a bit more stuff to be done such as trees and more config options.
 - - 1.16: Stable, will receive all content updates up to 1.18 update. (Seems like it will have some features backported from 1.18)
 - - 1.15: Stable, no support will be given since it's abandoned.
-
 
 
 # To-Do List
