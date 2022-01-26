@@ -1,11 +1,10 @@
 package dev.denismasterherobrine.magicalforest;
 
-import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
-
+import dev.denismasterherobrine.magicalforest.biome.MagicalForestBiomeProvider;
 import dev.denismasterherobrine.magicalforest.config.Configuration;
-import dev.denismasterherobrine.magicalforest.worldgen.MagicalForestBiome;
 
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.resources.ResourceLocation;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -15,6 +14,8 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import terrablender.api.BiomeProviders;
+
 import java.util.stream.Collectors;
 
 @Mod("magicalforest")
@@ -23,8 +24,6 @@ public class MagicalForest {
 
     public static final String MOD_ID = "magicalforest";
 
-    public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MOD_ID);
-
     private static final Logger LOGGER = LogManager.getLogger();
 
         public MagicalForest() {
@@ -32,20 +31,18 @@ public class MagicalForest {
             FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
             FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 
-            MinecraftForge.EVENT_BUS.register(this);
-
-            REGISTRY_HELPER.register(FMLJavaModLoadingContext.get().getModEventBus());
-
             Configuration.loadConfig(Configuration.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("MagicalForest-common.toml"));
         }
 
         private void setup(final FMLCommonSetupEvent event)
         {
-            event.enqueueWork(() -> {
-                MagicalForestBiome.addBiomeTypes();
-                MagicalForestBiome.registerBiomesToDictionary();
-                MagicalForestBiome.addHillBiome();
-            });
+            if (!Configuration.biomeWeightForest.get().equals(0)){
+                event.enqueueWork(
+                        () -> BiomeProviders.register(
+                                new MagicalForestBiomeProvider(
+                                        new ResourceLocation(MOD_ID, "biome_provider"), 2))
+                );
+            }
         }
 
         private void processIMC(final InterModProcessEvent event)
