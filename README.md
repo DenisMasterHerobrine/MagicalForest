@@ -19,7 +19,8 @@ Also this mod accepts IMCs and compatible with a bunch of mods such as:
 
 <div align="center"> <h1>  Ports? </h1> </div>
 
-- Fabric: **Planned as of 1.18.1**.
+- Fabric: 
+- - 1.18: Stable, but requires a bit more stuff to be done such as trees and more config options.
 - Forge:
 - - 1.18: Stable, but requires a bit more stuff to be done such as trees and more config options.
 - - 1.16: Stable, will receive all content updates up to 1.18 update. (Seems like it will have some features backported from 1.18)
@@ -34,7 +35,8 @@ Also this mod accepts IMCs and compatible with a bunch of mods such as:
 - Begin work on Amber blocks and lights and Aspect Crystals
 
 NOTE: 
- - "master" branch is for 1.18.1/1.18.2 builds. Moved from Abnormals Core biome creation to TerraBlender. Some minor enhancements from both 1.15 and 1.16 versions.
+ - "master" branch is for 1.18.1/1.18.2 builds. Moved from Abnormals Core biome creation to TerraBlender. Some minor enhancements from both 1.15 and 1.16 versions. Also support for Fabric.
  - "1.16.5" branch is for 1.16.5 builds. Full rewrite of 1.15.2 version.
  - "1.15.2" branch is for 1.15.2 builds, currently abandoned version of Magical Forest. (1.0.x)
 
+ - "1.18.x-fabric" branch is the same as "1.18.x" branch, but for Fabric Mod Loader.
