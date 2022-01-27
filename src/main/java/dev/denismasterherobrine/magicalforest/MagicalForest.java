@@ -1,57 +1,45 @@
 package dev.denismasterherobrine.magicalforest;
 
-import com.minecraftabnormals.abnormals_core.core.util.registry.RegistryHelper;
+import dev.denismasterherobrine.magicalforest.biome.BiomeRegistry;
+import dev.denismasterherobrine.magicalforest.biome.MagicalForestBiomeProvider;
+import dev.denismasterherobrine.magicalforest.configuration.ConfigManager;
+import dev.denismasterherobrine.magicalforest.configuration.Configuration;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+import net.fabricmc.api.ModInitializer;
+import net.minecraft.resources.ResourceLocation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import terrablender.api.BiomeProviders;
+import terrablender.api.TerraBlenderApi;
 
-import dev.denismasterherobrine.magicalforest.config.Configuration;
-import dev.denismasterherobrine.magicalforest.worldgen.MagicalForestBiome;
+public class MagicalForest implements ModInitializer, TerraBlenderApi {
+	// This logger is used to write text to the console and the log file.
+	// It is considered best practice to use your mod id as the logger's name.
+	// That way, it's clear which mod wrote info, warnings, and errors.
+	public static final Logger LOGGER = LoggerFactory.getLogger(MagicalForest.MOD_ID);
+	public static final String MOD_ID = "magicalforest";
+	@Override
+	public void onInitialize() {
+		// This code runs as soon as Minecraft is in a mod-load-ready state.
+		// However, some things (like resources) may still be uninitialized.
+		// Proceed with mild caution.
+		BiomeRegistry.registerBiomes();
+		ConfigManager.registerAutoConfig();
+		Configuration config = AutoConfig.getConfigHolder(Configuration.class).getConfig();
+		try {
+			config.validatePostLoad();
+		} catch (ConfigData.ValidationException e) {
+			e.printStackTrace();
+		}
+	}
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
-
-@Mod("magicalforest")
-@Mod.EventBusSubscriber(modid = MagicalForest.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class MagicalForest {
-
-    public static final String MOD_ID = "magicalforest";
-
-    public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MOD_ID);
-
-    private static final Logger LOGGER = LogManager.getLogger();
-
-        public MagicalForest() {
-
-            FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-            FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-
-            MinecraftForge.EVENT_BUS.register(this);
-
-            REGISTRY_HELPER.register(FMLJavaModLoadingContext.get().getModEventBus());
-
-            Configuration.loadConfig(Configuration.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("MagicalForest-common.toml"));
-        }
-
-        private void setup(final FMLCommonSetupEvent event)
-        {
-            event.enqueueWork(() -> {
-                MagicalForestBiome.addBiomeTypes();
-                MagicalForestBiome.registerBiomesToDictionary();
-                MagicalForestBiome.addHillBiome();
-            });
-        }
-
-        private void processIMC(final InterModProcessEvent event)
-        {
-            LOGGER.info("Got IMC {}", event.getIMCStream().
-                    map(m->m.getMessageSupplier().get()).
-                    collect(Collectors.toList()));
-        }
-    }
+	@Override
+	public void onTerraBlenderInitialized() {
+		if (ConfigManager.getConfig().biomeWeight != 0){
+			BiomeProviders.register(new MagicalForestBiomeProvider(new ResourceLocation(MOD_ID, "biome_provider"), ConfigManager.getConfig().biomeWeight));
+		}
+		else LOGGER.info("Magical Forest biome is disabled in the config! Please change 0 to something bigger to re-enable it.");
+	}
+}

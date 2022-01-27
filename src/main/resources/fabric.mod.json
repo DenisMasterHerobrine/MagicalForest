@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "magicalforest",
+  "version": "${version}",
+
+  "name": "Magical Forest",
+  "description": "This mod brings back awesome Magical Forest biome from Thaumcraft to 1.15.2+ versions of Minecraft!",
+  "authors": [
+    "DenisMasterHerobrine"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/magical-forest",
+    "sources": "https://github.com/DenisMasterHerobrine/MagicalForest"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/magicalforest/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.denismasterherobrine.magicalforest.MagicalForest"
+    ],
+    "modmenu": [
+      "dev.denismasterherobrine.magicalforest.configuration.ModMenuIntegration"
+    ],
+    "terrablender": [
+      "dev.denismasterherobrine.magicalforest.MagicalForest"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17",
+    "terrablender":">=1.1.0.73",
+    "cloth-config": ">=6.1.48",
+    "modmenu": ">=3.0.0"
+  }
+}
