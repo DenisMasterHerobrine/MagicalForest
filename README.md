@@ -20,7 +20,7 @@ Also this mod accepts IMCs and compatible with a bunch of mods such as:
 <div align="center"> <h1>  Ports? </h1> </div>
 
 - Fabric: 
-- - 1.18: Unstable, also requires a bit more stuff to be done such as trees and more config options.
+- - 1.18: Stable, but requires a bit more stuff to be done such as trees and more config options.
 - Forge:
 - - 1.18: Stable, but requires a bit more stuff to be done such as trees and more config options.
 - - 1.16: Stable, will receive all content updates up to 1.18 update. (Seems like it will have some features backported from 1.18)
