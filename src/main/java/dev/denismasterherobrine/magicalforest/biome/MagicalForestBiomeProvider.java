@@ -22,6 +22,6 @@ public class MagicalForestBiomeProvider extends BiomeProvider {
     public void addOverworldBiomes(Registry<Biome> registry, Consumer<Pair<TBClimate.ParameterPoint, ResourceKey<Biome>>> mapper)
     {
         this.addBiome(mapper, Climate.Parameter.point(0.5F), Climate.Parameter.point(0.7F), Climate.Parameter.point(1.3F), Climate.Parameter.point(0.4F), Climate.Parameter.point(0.2F), Climate.Parameter.point(0.1F), 0.0F, BiomeInitializer.MAGICAL_FOREST);
-        this.addBiomeSimilar(mapper, Biomes.SPARSE_JUNGLE, BiomeInitializer.MAGICAL_FOREST);
+        this.addBiomeSimilar(mapper, Biomes.FLOWER_FOREST, BiomeInitializer.MAGICAL_FOREST);
     }
 }

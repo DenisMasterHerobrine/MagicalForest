@@ -4,5 +4,6 @@
   "text.autoconfig.magicalforest.option.biomeWeight.@Tooltip[0]": "There you can set Magical Forest biome weight.",
   "text.autoconfig.magicalforest.option.biomeWeight.@Tooltip[1]": "The lower the value, the rarer the biome.",
   "text.autoconfig.magicalforest.option.biomeWeight.@Tooltip[2]": "Set 0 to disable a biome.",
-  "text.autoconfig.magicalforest.option.biomeWeight": "Biome Weight"
+  "text.autoconfig.magicalforest.option.biomeWeight": "Biome Weight",
+  "biome.magicalforest.magical_forest": "Magical Forest"
 }

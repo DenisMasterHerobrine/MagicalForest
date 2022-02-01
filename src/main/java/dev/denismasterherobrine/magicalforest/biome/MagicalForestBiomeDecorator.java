@@ -76,9 +76,9 @@ public class MagicalForestBiomeDecorator {
         BiomeDefaultFeatures.addDefaultSoftDisks(biomeFeatures);
 
         BiomeDefaultFeatures.addForestFlowers(biomeFeatures);
-        BiomeDefaultFeatures.addWarmFlowers(biomeFeatures);
         BiomeDefaultFeatures.addWaterTrees(biomeFeatures);
         BiomeDefaultFeatures.addGroveTrees(biomeFeatures);
+
         BiomeDefaultFeatures.addFerns(biomeFeatures);
 
         BiomeDefaultFeatures.addMossyStoneBlock(biomeFeatures);

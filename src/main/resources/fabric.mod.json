@@ -35,7 +35,6 @@
     "minecraft": "1.18.x",
     "java": ">=17",
     "terrablender":">=1.1.0.73",
-    "cloth-config": ">=6.1.48",
-    "modmenu": ">=3.0.0"
+    "cloth-config": ">=6.1.48"
   }
 }
