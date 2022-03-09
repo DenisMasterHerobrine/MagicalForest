@@ -24,10 +24,10 @@ public class FancyOakTreeFeature {
         return treePlacementBase(placement).build();
     }
 
-    public static final PlacedFeature FANCY_OAK_TREES = PlacementUtils.register("trees_fancy_oak", TreeFeatures.FANCY_OAK
-            .placed(treePlacement(PlacementUtils.countExtra(5, 0.1f, 1))));
+    //public static final PlacedFeature FANCY_OAK_TREES = PlacementUtils.register("trees_fancy_oak", TreeFeatures.FANCY_OAK
+    //        .placed(treePlacement(PlacementUtils.countExtra(5, 0.1f, 1))));
 
     public static void addFancyOakTrees(BiomeGenerationSettings.Builder builder) {
-        builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FancyOakTreeFeature.FANCY_OAK_TREES);
+    //    builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FancyOakTreeFeature.FANCY_OAK_TREES);
     }
 }

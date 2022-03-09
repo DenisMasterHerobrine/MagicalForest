@@ -14,7 +14,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import terrablender.api.BiomeProviders;
+import terrablender.api.Regions;
 
 import java.util.stream.Collectors;
 
@@ -38,9 +38,8 @@ public class MagicalForest {
         {
             if (!Configuration.biomeWeightForest.get().equals(0)){
                 event.enqueueWork(
-                        () -> BiomeProviders.register(
-                                new MagicalForestBiomeProvider(
-                                        new ResourceLocation(MOD_ID, "magical_forest_biome_provider"), 2))
+                        () -> Regions.register(
+                                new MagicalForestBiomeProvider(Configuration.biomeWeightForest.get()))
                 );
             }
             else LOGGER.info("Magical Forest biome is disabled in the config! Please change 0 to something bigger to re-enable it.");
