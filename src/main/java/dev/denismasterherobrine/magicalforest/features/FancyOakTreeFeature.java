@@ -23,8 +23,6 @@ import java.util.List;
 import java.util.OptionalInt;
 
 public class FancyOakTreeFeature {
-    private static final TreeDecorator BEEHIVE = new BeehiveDecorator(1.0F);
-
     private static ImmutableList.Builder<PlacementModifier> treePlacementBase(PlacementModifier placement) {
         return ImmutableList.<PlacementModifier>builder()
                 .add(placement)

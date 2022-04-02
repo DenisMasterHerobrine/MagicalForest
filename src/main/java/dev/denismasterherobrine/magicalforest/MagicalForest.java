@@ -13,7 +13,6 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import terrablender.api.RegionType;
 import terrablender.api.Regions;
 
 import java.util.stream.Collectors;
@@ -37,7 +36,7 @@ public class MagicalForest {
         private void setup(final FMLCommonSetupEvent event)
         {
             if (!Configuration.biomeWeightForest.get().equals(0)){
-                // Given we only add two biomes, we should keep our weight relatively low.
+                // Given we only add one biome, we should keep our weight relatively low.
                 Regions.register(new MagicalForestRegionProvider(new ResourceLocation(MOD_ID, "overworld"), Configuration.biomeWeightForest.get()));
             }
             else LOGGER.info("Magical Forest biome is disabled in the config! Please change 0 to something bigger to re-enable it.");
