@@ -1,16 +1,21 @@
 package dev.denismasterherobrine.magicalforest;
 
 import dev.denismasterherobrine.magicalforest.biome.BiomeRegistry;
-import dev.denismasterherobrine.magicalforest.biome.MagicalForestBiomeProvider;
+import dev.denismasterherobrine.magicalforest.biome.MagicalForestRegionProvider;
 import dev.denismasterherobrine.magicalforest.configuration.ConfigManager;
 import dev.denismasterherobrine.magicalforest.configuration.Configuration;
+
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
+
 import net.fabricmc.api.ModInitializer;
+
 import net.minecraft.resources.ResourceLocation;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import terrablender.api.BiomeProviders;
+
+import terrablender.api.Regions;
 import terrablender.api.TerraBlenderApi;
 
 public class MagicalForest implements ModInitializer, TerraBlenderApi {
@@ -37,7 +42,7 @@ public class MagicalForest implements ModInitializer, TerraBlenderApi {
 	@Override
 	public void onTerraBlenderInitialized() {
 		if (ConfigManager.getConfig().biomeWeight != 0){
-			BiomeProviders.register(new MagicalForestBiomeProvider(new ResourceLocation(MOD_ID, "magical_forest_biome_provider"), ConfigManager.getConfig().biomeWeight));
+			Regions.register(new MagicalForestRegionProvider(new ResourceLocation(MOD_ID, "overworld"), ConfigManager.getConfig().biomeWeight));
 		}
 		else LOGGER.info("Magical Forest biome is disabled in the config! Please change 0 to something bigger to re-enable it.");
 	}

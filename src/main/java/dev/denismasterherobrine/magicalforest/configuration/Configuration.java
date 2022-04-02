@@ -7,8 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "magicalforest")
 public class Configuration implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
-
     @ConfigEntry.Gui.Tooltip(count = 3)
     @ConfigEntry.Gui.RequiresRestart
-    public int biomeWeight = 2;
+    public int biomeWeight = 1;
 }
