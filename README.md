@@ -1,5 +1,5 @@
-![](https://cf.way2muchnoise.eu/magical-forest.svg)
-![](https://cf.way2muchnoise.eu/versions/magical-forest.svg)
+![](https://cf.way2muchnoise.eu/383666.svg)
+![](https://cf.way2muchnoise.eu/versions/383666.svg)
 ![](https://img.shields.io/github/license/DenisMasterHerobrine/MagicalForest) 
 ![](https://img.shields.io/github/issues/denismasterherobrine/magicalforest)
 <div align="center"> <h1>  Magical Forest </h1> </div>
