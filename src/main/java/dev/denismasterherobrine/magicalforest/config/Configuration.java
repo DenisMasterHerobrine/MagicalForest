@@ -18,7 +18,7 @@ public class Configuration {
 
     static {
         COMMON_BUILDER.comment("General Magical Forest Biome Configuration").push(CATEGORY_GENERAL);
-        biomeWeightForest = COMMON_BUILDER.comment("Magical Forest spawn weight in Overworld. The lower the number, the rarer is the biome. Set 0 to disable this biome.").defineInRange("biomeWeightForest", 2, 0,2147483647);
+        biomeWeightForest = COMMON_BUILDER.comment("Magical Forest spawn weight in Overworld. The lower the number, the rarer is the biome. Set 0 to disable this biome.").defineInRange("biomeWeightForest", 1, 0,2147483647);
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();
