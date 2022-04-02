@@ -59,6 +59,6 @@ This mod brings back awesome Magical Forest biome from Thaumcraft to 1.15.2+ ver
 [[dependencies.magicalforest]]
     modId = "terrablender"
     mandatory = true
-    versionRange = "[1.18.1-1.1.0.73,)"
+    versionRange = "[1.18.2-1.1.0.99,)"
     ordering = "BEFORE"
     side = "BOTH"
