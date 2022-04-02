@@ -23,6 +23,6 @@ public class MagicalForestRegionProvider extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper)
     {
-        this.addBiome(mapper, Climate.Parameter.point(0.35F), Climate.Parameter.point(0.5F), Climate.Parameter.point(1.5F), Climate.Parameter.point(0.6F), Climate.Parameter.point(0.02F), Climate.Parameter.point(0.125F), 0F, BiomeInitializer.MAGICAL_FOREST);
+        this.addBiome(mapper, Climate.Parameter.point(0.35F), Climate.Parameter.point(0.5F), Climate.Parameter.point(0.03F), Climate.Parameter.point(0.6F), Climate.Parameter.point(0.02F), Climate.Parameter.point(0.125F), 0F, BiomeInitializer.MAGICAL_FOREST);
     }
 }
