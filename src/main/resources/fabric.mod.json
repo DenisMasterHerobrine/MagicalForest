@@ -32,9 +32,9 @@
   "depends": {
     "fabricloader": ">=0.12.12",
     "fabric": "*",
-    "minecraft": "1.18.x",
+    "minecraft": "1.19.x",
     "java": ">=17",
-    "terrablender":">=1.1.0.99",
-    "cloth-config": ">=6.1.48"
+    "terrablender":">=2.0.0.109",
+    "cloth-config": ">=7.0.69"
   }
 }
