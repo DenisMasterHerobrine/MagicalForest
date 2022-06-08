@@ -3,7 +3,6 @@ package dev.denismasterherobrine.magicalforest.features;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
@@ -29,6 +28,7 @@ public class FancyOakTreeFeature {
                 .add(SurfaceWaterDepthFilter.forMaxDepth(0))
                 .add(PlacementUtils.HEIGHTMAP_OCEAN_FLOOR)
                 .add(PlacementUtils.HEIGHTMAP_WORLD_SURFACE)
+                .add(PlacementUtils.HEIGHTMAP_TOP_SOLID)
                 .add(BiomeFilter.biome());
     }
 
@@ -46,7 +46,8 @@ public class FancyOakTreeFeature {
 
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> FANCY_OAK_TREES = FeatureUtils.register("trees_fancy_oak", Feature.TREE, createFancyOak().build());
 
-    static final Holder<PlacedFeature> FANCY_OAK_TREES_FEATURE = PlacementUtils.register("trees_fancy_oak_feature", FancyOakTreeFeature.FANCY_OAK_TREES, treePlacement(PlacementUtils.countExtra(5, 0.1f, 1)));
+    static final Holder<PlacedFeature> FANCY_OAK_TREES_FEATURE =
+            PlacementUtils.register("trees_fancy_oak_feature", FancyOakTreeFeature.FANCY_OAK_TREES, treePlacement(PlacementUtils.countExtra(5, 0.1f, 1)));
 
     public static void addFancyOakTrees(BiomeGenerationSettings.Builder builder) {
         builder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, FancyOakTreeFeature.FANCY_OAK_TREES_FEATURE);
