@@ -1,9 +1,11 @@
 package dev.denismasterherobrine.magicalforest;
 
+import dev.denismasterherobrine.magicalforest.biome.BiomeRegistry;
 import dev.denismasterherobrine.magicalforest.biome.MagicalForestRegionProvider;
 import dev.denismasterherobrine.magicalforest.config.Configuration;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -30,13 +32,15 @@ public class MagicalForest {
             FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
             FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 
+            BiomeRegistry.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
+            BiomeRegistry.registerBiomes();
+
             Configuration.loadConfig(Configuration.COMMON_CONFIG, FMLPaths.CONFIGDIR.get().resolve("MagicalForest-common.toml"));
         }
 
         private void setup(final FMLCommonSetupEvent event)
         {
             if (!Configuration.biomeWeightForest.get().equals(0)){
-                // Given we only add one biome, we should keep our weight relatively low.
                 Regions.register(new MagicalForestRegionProvider(new ResourceLocation(MOD_ID, "overworld"), Configuration.biomeWeightForest.get()));
             }
             else LOGGER.info("Magical Forest biome is disabled in the config! Please change 0 to something bigger to re-enable it.");

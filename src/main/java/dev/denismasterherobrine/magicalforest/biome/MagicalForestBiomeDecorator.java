@@ -16,16 +16,15 @@ public class MagicalForestBiomeDecorator {
         return Mth.hsvToRgb(0.6325F - f * 0.1F, 0.44F + f * 0.11F, 1F);
     }
 
-    private static Biome biome(Biome.Precipitation precipitation, Biome.BiomeCategory category, float temperature, float downfall, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder)
+    private static Biome biome(Biome.Precipitation precipitation, float temperature, float downfall, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder)
     {
-        return biome(precipitation, category, temperature, downfall, ColorConstants.STANDARD_WATER, ColorConstants.STANDARD_WATERFOG, ColorConstants.MAGICAL_FOREST_FOLIAGE_COLOR, ColorConstants.MAGICAL_FOREST_GRASS_COLOR, spawnBuilder, biomeBuilder);
+        return biome(precipitation, temperature, downfall, ColorConstants.STANDARD_WATER, ColorConstants.STANDARD_WATERFOG, ColorConstants.MAGICAL_FOREST_FOLIAGE_COLOR, ColorConstants.MAGICAL_FOREST_GRASS_COLOR, spawnBuilder, biomeBuilder);
     }
 
-    private static Biome biome(Biome.Precipitation precipitation, Biome.BiomeCategory category, float temperature, float downfall, int waterColor, int waterFogColor, int grassColor, int foliageColor, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder)
+    private static Biome biome(Biome.Precipitation precipitation, float temperature, float downfall, int waterColor, int waterFogColor, int grassColor, int foliageColor, MobSpawnSettings.Builder spawnBuilder, BiomeGenerationSettings.Builder biomeBuilder)
     {
         return (new Biome.BiomeBuilder())
                 .precipitation(precipitation)
-                .biomeCategory(category)
                 .temperature(temperature)
                 .downfall(downfall)
                 .specialEffects((new BiomeSpecialEffects.Builder())
@@ -91,8 +90,10 @@ public class MagicalForestBiomeDecorator {
         BiomeDefaultFeatures.addCommonBerryBushes(biomeFeatures);
         BiomeDefaultFeatures.addJungleMelons(biomeFeatures);
 
+
+
         FancyOakTreeFeature.addFancyOakTrees(biomeFeatures);
 
-        return biome(Biome.Precipitation.RAIN, Biome.BiomeCategory.FOREST, 0.5F, 0.7F, ColorConstants.STANDARD_WATER, ColorConstants.STANDARD_WATERFOG, ColorConstants.MAGICAL_FOREST_FOLIAGE_COLOR, ColorConstants.MAGICAL_FOREST_GRASS_COLOR, spawnSettings, biomeFeatures);
+        return biome(Biome.Precipitation.RAIN, 0.5F, 0.7F, ColorConstants.STANDARD_WATER, ColorConstants.STANDARD_WATERFOG, ColorConstants.MAGICAL_FOREST_FOLIAGE_COLOR, ColorConstants.MAGICAL_FOREST_GRASS_COLOR, spawnSettings, biomeFeatures);
     }
 }

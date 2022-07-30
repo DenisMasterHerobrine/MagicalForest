@@ -14,8 +14,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator;
-import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.*;
 
@@ -30,6 +28,7 @@ public class FancyOakTreeFeature {
                 .add(SurfaceWaterDepthFilter.forMaxDepth(0))
                 .add(PlacementUtils.HEIGHTMAP_OCEAN_FLOOR)
                 .add(PlacementUtils.HEIGHTMAP_WORLD_SURFACE)
+                .add(PlacementUtils.HEIGHTMAP_TOP_SOLID)
                 .add(BiomeFilter.biome());
     }
 
